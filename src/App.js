@@ -5,8 +5,8 @@ import {
   Link
 } from 'react-router-dom';
 
-import Home from './modules/Home';
-import About from './modules/About';
+import Home from './pages/Home';
+import About from './pages/About';
 
 import './App.css';
 
