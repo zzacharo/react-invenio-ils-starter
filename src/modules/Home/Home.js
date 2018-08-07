@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
 import Title from './components/Title';
 import InputPreview from './components/InputPreview';
@@ -8,7 +7,7 @@ import { setMessage } from './actions';
 
 import './Home.css';
 
-class Home extends Component {
+export class Home extends Component {
   constructor(props) {
     super(props)
 
@@ -35,5 +34,3 @@ class Home extends Component {
     );
   }
 }
-
-export default connect(state => state)(Home);
