@@ -1,15 +1,15 @@
-import { SET_MESSAGE } from './types';
+import { SET_MESSAGE } from "./types";
 
 const initState = {
-  message: '',
+  message: ""
 };
 
 export default (state = initState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case SET_MESSAGE:
-      return {...state, message: action.payload.message}
+      return { ...state, message: action.payload.message };
 
     default:
       return state;
- }
-}
+  }
+};
