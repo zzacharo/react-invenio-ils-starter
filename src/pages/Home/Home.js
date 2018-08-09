@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import Title from "../../components/Title";
-import InputPreview from "./components/InputPreview";
+import Title from '../../components/Title';
+import InputPreview from './components/InputPreview';
 
-import { setMessage } from "./actions";
+import { setMessage } from './actions';
 
-import "./Home.css";
+import './Home.css';
 
 export class Home extends Component {
   constructor(props) {
