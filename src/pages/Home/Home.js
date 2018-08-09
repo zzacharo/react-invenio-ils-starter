@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Title from './components/Title';
+import Title from '../../components/Title';
 import InputPreview from './components/InputPreview';
 
 import { setMessage } from './actions';
