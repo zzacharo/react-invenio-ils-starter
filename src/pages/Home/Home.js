@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import Title from '../../components/Title';
 import InputPreview from './components/InputPreview';
@@ -7,16 +8,16 @@ import { setMessage } from './actions';
 
 import './Home.css';
 
-export class Home extends Component {
+export default class Home extends Component {
   constructor(props) {
     super(props);
 
     this.onChangeMessage = this.onChangeMessage.bind(this);
   }
 
-  onChangeMessage = value => {
+  onChangeMessage(value) {
     this.props.dispatch(setMessage(value));
-  };
+  }
 
   render() {
     const { message } = this.props.homeReducer;
@@ -30,3 +31,8 @@ export class Home extends Component {
     );
   }
 }
+
+Home.displayName = 'Home';
+Home.propTypes = {
+  homeReducer: PropTypes.object,
+};

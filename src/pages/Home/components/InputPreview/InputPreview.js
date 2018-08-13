@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+// import PropTypes from 'prop-types';
+
 import './InputPreview.css';
 
-class InputPreview extends Component {
+export default class InputPreview extends Component {
   // constructor(props) {
   //   super(props);
   // }
@@ -19,4 +21,5 @@ class InputPreview extends Component {
   }
 }
 
-export default InputPreview;
+InputPreview.displayName = 'InputPreview';
+// InputPreview.propTypes = {};

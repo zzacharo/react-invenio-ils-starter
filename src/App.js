@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+// import PropTypes from 'prop-types';
+
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import Home from './pages/Home';
@@ -6,7 +8,7 @@ import About from './pages/About';
 
 import './App.css';
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
       <div className="app">
@@ -33,4 +35,5 @@ class App extends Component {
   }
 }
 
-export default App;
+App.displayName = 'App';
+// App.propTypes = {};

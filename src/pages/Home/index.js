@@ -1,4 +1,4 @@
 import { connect } from 'react-redux';
-import { Home } from './Home';
+import Home from './Home';
 
 export default connect(state => state)(Home);

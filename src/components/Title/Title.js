@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+// import PropTypes from 'prop-types';
+
 import './Title.css';
 
-class Title extends Component {
+export default class Title extends Component {
   render() {
     return <div className="title">Title</div>;
   }
 }
 
-export default Title;
+Title.displayName = 'Title';
+// Title.propTypes = {};
