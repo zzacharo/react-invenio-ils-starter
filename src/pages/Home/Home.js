@@ -1,32 +1,22 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Grid } from 'semantic-ui-react';
 
-import Title from '../../components/Title';
-import InputPreview from './components/InputPreview';
-
-import { setMessage } from './actions';
+import BookList from '../../components/BookList';
 
 import './Home.css';
 
 export default class Home extends Component {
-  constructor(props) {
-    super(props);
-
-    this.onChangeMessage = this.onChangeMessage.bind(this);
-  }
-
-  onChangeMessage(value) {
-    this.props.dispatch(setMessage(value));
-  }
-
   render() {
-    const { message } = this.props.homeReducer;
-
     return (
       <div className="home">
-        Home
-        <Title />
-        <InputPreview value={message} onChange={this.onChangeMessage} />
+        <Grid columns="equal">
+          <Grid.Column>1</Grid.Column>
+          <Grid.Column width={12}>
+            <BookList />
+          </Grid.Column>
+          <Grid.Column>3 </Grid.Column>
+        </Grid>
       </div>
     );
   }
@@ -34,5 +24,5 @@ export default class Home extends Component {
 
 Home.displayName = 'Home';
 Home.propTypes = {
-  homeReducer: PropTypes.object,
+  aboutReducer: PropTypes.object,
 };
