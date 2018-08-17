@@ -1,0 +1,50 @@
+// mini tiny small large huge massive
+$white: #fff;
+$black: #000;
+$margin-small: 10px;
+$padding-small: 10px;
+$body-background-color: #f6f6f6;
+$book-border-color: #e2e2e2;
+
+.book {
+  display: flex;
+  flex-direction: column;
+  margin: $margin-small;
+  width: 245px;
+  height: 345px;
+  position: relative;
+
+  &:hover {
+    transition: all 0.1s ease;
+
+    border-radius: 2%;
+    background-color: $book-border-color;
+  }
+
+  .book-description {
+    font-size: 12px;
+  }
+}
+// .book {
+//   display: flex;
+//   flex-direction: column;
+//   will-change: opacity;
+
+//   width: 200px;
+//   height: 280px;
+//   margin: $margin-small;
+//   padding: $padding-small;
+
+//   background-color: $white;
+//   border-radius: 2%;
+//   border: 1px solid $book-border-color;
+//   align-items: center;
+//   justify-content: flex-end;
+
+//   &:hover {
+//     transition: all 0.1s ease;
+
+//     border-radius: 2%;
+//     background-color: $book-border-color;
+//   }
+// }
