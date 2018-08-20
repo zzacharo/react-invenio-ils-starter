@@ -3,19 +3,22 @@ import PropTypes from 'prop-types';
 import { Grid } from 'semantic-ui-react';
 
 import BookList from '../../components/BookList';
+import MenuSidebar from './components/MenuSidebar';
 
 import './Home.css';
+import { SIDEBAR_MENU_ITEMS } from '../../constants';
 
 export default class Home extends Component {
   render() {
     return (
       <div className="home">
-        <Grid columns="equal">
-          <Grid.Column>1</Grid.Column>
-          <Grid.Column width={12}>
+        <Grid columns="equal" className="pl-1vw">
+          <Grid.Column width={2}>
+            <MenuSidebar menuItems={SIDEBAR_MENU_ITEMS} />
+          </Grid.Column>
+          <Grid.Column>
             <BookList />
           </Grid.Column>
-          <Grid.Column>3 </Grid.Column>
         </Grid>
       </div>
     );

@@ -1,0 +1,16 @@
+$menu-item-header-color: #b6b6b6;
+$menu-item-item-hover-color: #e7e7e7;
+
+.menu-item-header {
+  color: $menu-item-header-color !important;
+  margin-bottom: 10px !important;
+}
+
+.menu-item-item {
+  padding: 7px 0px !important;
+
+  &:hover {
+    background-color: $menu-item-item-hover-color;
+    cursor: pointer;
+  }
+}
