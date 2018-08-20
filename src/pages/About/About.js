@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import { setMessage } from './actions';
 
 import Title from '../../components/Title';
-import InputPreview from './components/InputPreview';
 
 import './About.css';
 
@@ -20,13 +19,10 @@ export default class About extends Component {
   }
 
   render() {
-    const { message } = this.props.aboutReducer;
-
     return (
       <div className="about">
         <h1>About</h1>
         <Title />
-        <InputPreview value={message} onChange={this.onChangeMessage} />
       </div>
     );
   }
