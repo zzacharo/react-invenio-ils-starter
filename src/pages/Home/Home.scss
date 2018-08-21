@@ -4,8 +4,9 @@ $body-background-color: #f6f6f6;
   margin-top: 80px;
   background-color: $body-background-color;
 
-  .pl-1vw {
-    margin-left: 1vw !important;
+  .sidebar-container {
+    padding-left: 28px !important;
+    min-width: 180px;
   }
 
   .book-list-container {
