@@ -27,7 +27,9 @@ export default class Header extends Component {
         inverted
         className="header-menu"
       >
-        <Menu.Item header>CDS Books</Menu.Item>
+        <Menu.Item header className="logo">
+          CERN Library
+        </Menu.Item>
         <Menu.Item>
           <SearchBar />
         </Menu.Item>

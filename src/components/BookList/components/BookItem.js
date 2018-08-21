@@ -10,14 +10,14 @@ export default class BookItem extends Component {
         <div
           className="book-cover"
           style={{
-            backgroundImage: `url(https://picsum.photos/200/300?image=106${
+            backgroundImage: `url(https://picsum.photos/200/280?image=106${
               this.props.id
             })`,
           }}
         />
         <div className="book-overlay">
           <Icon name="bookmark" size="large" />
-          <Button circular icon="eye" color="black" size="big" />
+          <Button circular icon="eye" size="big" />
           <Icon name="plus circle" size="large" />
         </div>
         <div className="book-meta">
