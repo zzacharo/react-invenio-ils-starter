@@ -1,0 +1,13 @@
+.book-list {
+  display: flex;
+  flex-direction: column;
+
+  .book-list-header {
+    display: flex;
+  }
+
+  .book-list-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
