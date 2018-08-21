@@ -18,7 +18,15 @@ export default class Header extends Component {
     );
 
     return (
-      <Menu stackable borderless fluid size="massive">
+      <Menu
+        stackable
+        borderless
+        fluid
+        size="large"
+        fixed="top"
+        inverted
+        className="header-menu"
+      >
         <Menu.Item header>CDS Books</Menu.Item>
         <Menu.Item>
           <SearchBar />
