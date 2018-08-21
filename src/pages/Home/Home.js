@@ -11,8 +11,8 @@ export default class Home extends Component {
   render() {
     return (
       <div className="home-container">
-        <Grid columns="equal" className="pl-1vw">
-          <Grid.Column width={2}>
+        <Grid columns="equal">
+          <Grid.Column width={2} className="sidebar-container">
             <MenuSidebar menuItems={SIDEBAR_MENU_ITEMS} />
           </Grid.Column>
           <Grid.Column className="book-list-container">
