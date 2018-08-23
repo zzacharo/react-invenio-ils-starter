@@ -5,6 +5,6 @@ import './Footer.css';
 
 export default class Footer extends Component {
   render() {
-    return <Menu>Footer</Menu>;
+    return <footer>Footer</footer>;
   }
 }

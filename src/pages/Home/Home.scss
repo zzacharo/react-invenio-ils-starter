@@ -2,19 +2,19 @@ $body-background-color: #fff;
 
 .home-container {
   background-color: $body-background-color;
-  height: 92vh;
 
   .sidebar-container {
-    padding-left: 28px !important;
+    position: fixed !important;
+
     min-width: 180px;
+    padding-left: 28px !important;
   }
 
   .book-list-container {
     display: flex;
-    overflow-y: auto;
     flex-direction: column;
 
-    height: 92vh;
+    margin-left: 200px;
 
     justify-content: space-between;
   }

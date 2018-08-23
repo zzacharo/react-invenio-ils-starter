@@ -6,9 +6,11 @@ $header-height: 90px;
 }
 
 .app-content {
-  margin-top: $header-height;
-}
-
-.footer {
   display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+  padding-top: $header-height;
+
+  justify-content: space-between;
 }

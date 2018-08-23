@@ -45,7 +45,7 @@ class BookDetails extends Component {
         </div>
 
         <div className="book-details-suggestions">
-          <BookList data={bookDetailsMock} />;
+          <BookList data={bookDetailsMock} />
         </div>
       </div>
     );
