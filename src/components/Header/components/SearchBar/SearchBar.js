@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
 import { Input } from 'semantic-ui-react';
 
+import './Searchbar.css';
+
 class Searchbar extends Component {
   render() {
     let { placeholder } = this.props;
     placeholder = placeholder || 'Search for a book';
 
     return (
-      <Input icon="search" placeholder={placeholder} iconPosition="left" />
+      <Input
+        className="searchbar"
+        icon="search"
+        placeholder={placeholder}
+        iconPosition="left"
+      />
     );
   }
 }

@@ -17,8 +17,6 @@ $book-item-height: 320px;
   width: $book-item-width;
   height: $book-item-height;
   margin: $margin-10;
-  // box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.4);
-  // border-radius: 2%;
 
   .book-cover {
     width: 100%;
@@ -59,6 +57,5 @@ $book-item-height: 320px;
   }
   .book-meta {
     margin-top: $margin-10;
-    // padding: 0 $padding-10;
   }
 }
