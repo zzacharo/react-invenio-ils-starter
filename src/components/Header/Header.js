@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { Icon, Menu, Dropdown } from 'semantic-ui-react';
 
 import Searchbar from './components/SearchBar';
@@ -28,7 +29,7 @@ export default class Header extends Component {
         className="header-menu"
       >
         <Menu.Item header className="logo">
-          CERN Library
+          <Link to="/">CERN Library</Link>
         </Menu.Item>
         <Menu.Item>
           <Searchbar />

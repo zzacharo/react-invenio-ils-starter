@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Input } from 'semantic-ui-react';
 
-import './Searchbar.css';
+import './SearchBar.css';
 
-class Searchbar extends Component {
+class SearchBar extends Component {
   render() {
     let { placeholder } = this.props;
     placeholder = placeholder || 'Search for a book';
@@ -19,4 +19,4 @@ class Searchbar extends Component {
   }
 }
 
-export default Searchbar;
+export default SearchBar;
