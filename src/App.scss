@@ -1,4 +1,14 @@
+$header-height: 90px;
+
 .app {
   display: flex;
   flex-direction: column;
+}
+
+.app-content {
+  margin-top: $header-height;
+}
+
+.footer {
+  display: flex;
 }

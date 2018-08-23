@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import { Grid } from 'semantic-ui-react';
 import BookList from '../../components/BookList';
 import MenuSidebar from './components/MenuSidebar';
-import BookListMock from './BookList.mock';
+
+import bookListMock from './BookList.mock';
+import { SIDEBAR_MENU_ITEMS } from '../../constants';
 
 import './Home.css';
-import { SIDEBAR_MENU_ITEMS } from '../../constants';
 
 export default class Home extends Component {
   renderBookLists(data) {
@@ -21,7 +22,7 @@ export default class Home extends Component {
             <MenuSidebar menuItems={SIDEBAR_MENU_ITEMS} />
           </Grid.Column>
           <Grid.Column className="book-list-container">
-            {BookListMock.map(this.renderBookLists)}
+            {bookListMock.map(this.renderBookLists)}
           </Grid.Column>
         </Grid>
       </div>

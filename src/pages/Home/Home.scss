@@ -1,8 +1,8 @@
 $body-background-color: #fff;
 
 .home-container {
-  margin-top: 90px;
   background-color: $body-background-color;
+  height: 92vh;
 
   .sidebar-container {
     padding-left: 28px !important;
@@ -14,7 +14,7 @@ $body-background-color: #fff;
     overflow-y: auto;
     flex-direction: column;
 
-    height: 94vh;
+    height: 92vh;
 
     justify-content: space-between;
   }
