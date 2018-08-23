@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import { Grid } from 'semantic-ui-react';
 import BookResults from './components/BookResults';
 import MenuSidebar from './components/MenuSidebar';
-import BookListMock from './BookList.mock';
+
+import bookListMock from './BookList.mock';
+import { SIDEBAR_MENU_ITEMS } from '../../constants';
 
 import './Home.css';
-import { SIDEBAR_MENU_ITEMS } from '../../constants';
 
 export default class Home extends Component {
   render() {
@@ -16,7 +17,7 @@ export default class Home extends Component {
             <MenuSidebar menuItems={SIDEBAR_MENU_ITEMS} />
           </Grid.Column>
           <Grid.Column className="book-list-container">
-            <BookResults data={BookListMock} />
+            <BookResults data={bookListMock} />
           </Grid.Column>
         </Grid>
       </div>
