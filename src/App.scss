@@ -9,7 +9,7 @@ $header-height: 90px;
   display: flex;
   flex-direction: column;
 
-  height: 100vh;
+  min-height: 100vh;
   padding-top: $header-height;
 
   justify-content: space-between;
