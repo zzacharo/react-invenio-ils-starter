@@ -1,21 +1,18 @@
 $body-background-color: #fff;
+$side-container-width: 200px;
+$padding-30: 30px;
 
 .home-container {
-  margin-top: 90px;
   background-color: $body-background-color;
-
   .sidebar-container {
-    padding-left: 28px !important;
-    min-width: 180px;
+    position: fixed !important;
+    min-width: $side-container-width;
+    padding-left: $padding-30 !important;
   }
-
   .book-list-container {
     display: flex;
-    overflow-y: auto;
     flex-direction: column;
-
-    height: 94vh;
-
+    margin-left: $side-container-width;
     justify-content: space-between;
   }
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Icon, Menu, Dropdown } from 'semantic-ui-react';
 
-import SearchBar from './components/SearchBar';
+import Searchbar from './components/SearchBar';
 
 import './Header.css';
 
@@ -31,7 +31,7 @@ export default class Header extends Component {
           CERN Library
         </Menu.Item>
         <Menu.Item>
-          <SearchBar />
+          <Searchbar />
         </Menu.Item>
         <Menu.Item position="right">
           <Dropdown item trigger={trigger}>
@@ -48,6 +48,3 @@ export default class Header extends Component {
     );
   }
 }
-
-Header.displayName = 'Header';
-// Header.propTypes = {};
