@@ -1,39 +1,11 @@
-$white: #fff;
-$book-border-color: #e2e2e2;
-$margin-10: 10px;
 $padding-40: 40px;
-$margin-100: 100px;
-$book-item-width: 200px;
-$book-item-height: 320px;
+$margin-50: 50px;
 
 .book-details-container {
   padding: $padding-40;
 
   .book-details {
     display: flex;
-    margin-bottom: $margin-100;
-
-    .book-details-cover {
-      display: flex;
-
-      width: 300px;
-      height: 420px;
-
-      border: 1px solid $book-border-color;
-      border-radius: 2%;
-      background-color: $white;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
-    .book-details-info {
-      display: flex;
-      flex-direction: column;
-
-      padding: 0 $padding-40;
-    }
-
-    .book-details-suggestions {
-    }
+    margin-bottom: $margin-50;
   }
 }

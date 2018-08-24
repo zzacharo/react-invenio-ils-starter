@@ -2,24 +2,40 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 
 import BookList from '../../components/BookList';
+import BookCover from '../../components/BookCover';
+import BookInfo from './components/BookInfo';
 
 import bookDetailsMock from './BookDetails.mock';
+import database from '../../databse';
+
 import './BookDetails.css';
 
 class BookDetails extends Component {
-  state = {
-    title: '',
-    imageUrl: '',
-    description: '',
-  };
+  constructor(props) {
+    super(props);
 
-  static getDerivedStateFromProps(props, state) {
+    this.cover = {
+      width: 300,
+      height: 420,
+    };
+
+    this.state = {
+      bookInfo: {},
+      coverUrl: '',
+    };
+  }
+
+  static getDerivedStateFromProps(props) {
     const { recid } = props.match.params;
+    const { title, author, abstract } = database[recid];
 
     return {
-      title: 'Title',
-      description: 'Description',
-      imageUrl: `https://picsum.photos/300/420?image=10${recid}`,
+      bookInfo: {
+        title: title,
+        author: author,
+        abstract: abstract,
+      },
+      coverUrl: `https://picsum.photos/300/420?image=10${recid}`,
     };
   }
 
@@ -27,26 +43,11 @@ class BookDetails extends Component {
     return (
       <div className="book-details-container">
         <div className="book-details">
-          <div
-            className="book-details-cover"
-            style={{
-              backgroundImage: `url(${this.state.imageUrl})`,
-            }}
-          />
-          <div className="book-details-info">
-            <div className="book-details-title">
-              <h1>{this.state.title}</h1>
-            </div>
-            <div className="book-details-description">
-              {this.state.description}
-            </div>
-            <div className="book-details-other">Aditional Information</div>
-          </div>
+          <BookCover {...this.cover} coverUrl={this.state.coverUrl} />
+          <BookInfo {...this.state.bookInfo} />
         </div>
 
-        <div className="book-details-suggestions">
-          <BookList data={bookDetailsMock} />
-        </div>
+        <BookList data={bookDetailsMock} />
       </div>
     );
   }

@@ -2,11 +2,18 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { Button, Icon } from 'semantic-ui-react';
 
+import BookCover from '../../../BookCover';
+
 import './BookItem.css';
 
 class BookItem extends Component {
   constructor(props) {
     super(props);
+
+    this.cover = {
+      width: 180,
+      height: 260,
+    };
 
     this.goToDetails = this.goToDetails.bind(this);
   }
@@ -23,26 +30,26 @@ class BookItem extends Component {
   }
 
   render() {
-    const { title } = this.props;
+    const { title, id } = this.props;
+    const coverUrl = `https://picsum.photos/180/260?image=10${id}`;
 
     return (
       <div className="book-item">
+        <BookCover {...this.cover} coverUrl={coverUrl} />
         <div
-          className="book-cover"
+          className="book-overlay"
           style={{
-            backgroundImage: `url(https://picsum.photos/200/280?image=10${
-              this.props.id
-            })`,
+            width: `${this.cover.width}px`,
+            height: `${this.cover.height}px`,
           }}
-        />
-        <div className="book-overlay">
+        >
           <Icon name="bookmark" size="large" />
           <Button circular icon="eye" size="big" onClick={this.goToDetails} />
           <Icon name="plus circle" size="large" />
         </div>
         <div className="book-meta">
-          <h4>{title}</h4>
-          <p>Dummy Author</p>
+          <span className="book-title">{title}</span>
+          <span className="book-author">Dummy Author</span>
         </div>
       </div>
     );

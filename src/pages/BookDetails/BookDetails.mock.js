@@ -1,6 +1,6 @@
 export default {
   id: 1,
-  title: 'Users who viewed this item also viewed',
+  title: 'Other related books',
   items: [
     {
       id: 51,
@@ -40,6 +40,12 @@ export default {
     },
     {
       id: 57,
+      title: 'Esse praesentium s!',
+      description:
+        'Modi consequatur suscipit, dolorum nihil esse necessitatibus et sed atque!',
+    },
+    {
+      id: 47,
       title: 'Esse praesentium s!',
       description:
         'Modi consequatur suscipit, dolorum nihil esse necessitatibus et sed atque!',
