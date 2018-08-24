@@ -23,7 +23,6 @@ export default class Header extends Component {
         stackable
         borderless
         fluid
-        size="large"
         fixed="top"
         inverted
         className="header-menu"

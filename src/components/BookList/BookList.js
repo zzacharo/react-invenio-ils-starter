@@ -21,7 +21,7 @@ export default class BookList extends Component {
     const { items, title } = this.props.data;
     return (
       <div className="book-list">
-        <h1 className="book-list-header">{title}</h1>
+        <div className="book-list-header">{title}</div>
 
         <div className="book-list-content">{items.map(this.renderBook)}</div>
       </div>

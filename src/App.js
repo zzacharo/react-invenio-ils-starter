@@ -14,12 +14,12 @@ export default class App extends Component {
     return (
       <Router>
         <div className="app">
+          <Header />
           <div className="app-content">
-            <Header />
             <Route exact path="/" component={Home} />
             <Route path="/record/:recid" component={BookDetails} />
-            <Footer />
           </div>
+          <Footer />
         </div>
       </Router>
     );
