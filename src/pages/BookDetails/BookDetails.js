@@ -9,6 +9,8 @@ import bookDetailsMock from './BookDetails.mock';
 import database from '../../databse';
 
 import './BookDetails.css';
+import { subscribe } from '../../context';
+import { BookStore } from '../../store';
 
 class BookDetails extends Component {
   constructor(props) {
@@ -25,26 +27,44 @@ class BookDetails extends Component {
     };
   }
 
-  static getDerivedStateFromProps(props) {
-    const { recid } = props.match.params;
-    const { title, author, abstract } = database[recid];
-
-    return {
-      bookInfo: {
-        title: title,
-        author: author,
-        abstract: abstract,
-      },
-      coverUrl: `https://picsum.photos/300/420?image=10${recid}`,
-    };
+  componentDidMount() {
+    this.unlisten = this.props.history.listen((location, action) => {
+      this.props.fetchBook(location.state.recid);
+    });
+    // on load page get the recid from path
+    this.props.fetchBook(this.props.match.params.recid);
   }
 
+  componentWillUnmount() {
+    this.unlisten();
+  }
+
+  // static getDerivedStateFromProps(props) {
+  //   const { recid } = props.match.params;
+  //   const { title, author, abstract } = database[recid];
+
+  //   return {
+  //     bookInfo: {
+  //       title: title,
+  //       author: author,
+  //       abstract: abstract,
+  //     },
+  //     coverUrl: `https://picsum.photos/300/420?image=10${recid}`,
+  //   };
+  // }
+
   render() {
+    let { currentBook } = this.props;
     return (
       <div className="book-details-container">
         <div className="book-details">
-          <BookCover {...this.cover} coverUrl={this.state.coverUrl} />
-          <BookInfo {...this.state.bookInfo} />
+          <BookCover
+            {...this.cover}
+            coverUrl={`https://picsum.photos/300/420?image=10${
+              currentBook.recid
+            }`}
+          />
+          <BookInfo {...this.props.currentBook} />
         </div>
 
         <BookList data={bookDetailsMock} />
@@ -53,4 +73,4 @@ class BookDetails extends Component {
   }
 }
 
-export default withRouter(BookDetails);
+export default withRouter(subscribe(BookStore)(BookDetails));

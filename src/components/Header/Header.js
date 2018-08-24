@@ -5,13 +5,26 @@ import { Icon, Menu, Dropdown } from 'semantic-ui-react';
 import Searchbar from './components/SearchBar';
 
 import './Header.css';
+import { UserStore } from '../../plugin';
+import { subscribe } from '../../context';
 
-export default class Header extends Component {
+class Header extends Component {
   state = {};
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
+  constructor() {
+    super();
+    this.handleItemClick = this.handleItemClick.bind(this);
+  }
+
+  handleItemClick(e, { name }) {
+    this.setState({ activeItem: name });
+  }
 
   render() {
+    console.log('Header rendered');
+    let { user } = this.props;
+    console.log(user);
+
     const trigger = (
       <span>
         <Icon name="user" /> Hello, Bob
@@ -28,7 +41,8 @@ export default class Header extends Component {
         className="header-menu"
       >
         <Menu.Item header className="logo">
-          <Link to="/">CERN Library</Link>
+          CERN Library
+          {/* <Link to="/">CERN Library</Link> */}
         </Menu.Item>
         <Menu.Item>
           <Searchbar />
@@ -48,3 +62,8 @@ export default class Header extends Component {
     );
   }
 }
+
+const mapStateToProps = data => ({
+  user: data.user,
+});
+export default Header;

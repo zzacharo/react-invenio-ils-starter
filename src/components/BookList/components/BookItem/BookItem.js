@@ -30,6 +30,7 @@ class BookItem extends Component {
   }
 
   render() {
+    console.log('BookItem redered');
     const { title, id } = this.props;
     const coverUrl = `https://picsum.photos/180/260?image=10${id}`;
 

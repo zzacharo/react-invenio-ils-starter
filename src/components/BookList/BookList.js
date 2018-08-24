@@ -5,7 +5,7 @@ import BookItem from './components/BookItem';
 
 import './BookList.css';
 
-export default class BookList extends Component {
+class BookList extends Component {
   renderBook(book) {
     return (
       <BookItem
@@ -33,3 +33,5 @@ BookList.propTypes = {
   title: PropTypes.string,
   bookList: PropTypes.object,
 };
+
+export default BookList;

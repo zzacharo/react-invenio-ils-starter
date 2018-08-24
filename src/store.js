@@ -1,12 +1,67 @@
-import { createStore, applyMiddleware } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import thunk from 'redux-thunk';
+import React, { createContext, Component } from 'react';
+import database from './databse';
+const AppContext = createContext({});
 
-const rootReducer = () => {};
+export default class AppStore extends Component {
+  static Provider = AppContext.Provider;
+  static Consumer = AppContext.Consumer;
 
-const store = createStore(
-  rootReducer,
-  composeWithDevTools(applyMiddleware(thunk))
-);
+  state = {
+    home: {
+      title: 'Home',
+    },
+  };
 
-export default store;
+  renderExtraStores(stores) {
+    if (stores.length) {
+      let Store = stores.shift();
+      return <Store>{this.renderExtraStores(stores)}</Store>;
+    } else {
+      return { ...this.props.children };
+    }
+  }
+
+  render() {
+    let { extraStores } = this.props;
+    return (
+      <AppStore.Provider value={this.state}>
+        {this.renderExtraStores(extraStores)}
+      </AppStore.Provider>
+    );
+  }
+}
+
+const BookContext = createContext({});
+export class BookStore extends Component {
+  static Provider = BookContext.Provider;
+  static Consumer = BookContext.Consumer;
+
+  initialState = {
+    currentBook: {},
+  };
+
+  constructor() {
+    super();
+
+    this.actions = {
+      fetchBook: this.fetchBook.bind(this),
+    };
+
+    this.state = {
+      ...this.initialState,
+      ...this.actions,
+    };
+  }
+
+  fetchBook(recid) {
+    this.setState({ currentBook: { ...database[recid], recid: recid } });
+  }
+
+  render() {
+    return (
+      <BookStore.Provider value={this.state}>
+        {this.props.children}
+      </BookStore.Provider>
+    );
+  }
+}

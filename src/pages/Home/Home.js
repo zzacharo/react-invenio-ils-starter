@@ -8,9 +8,13 @@ import bookListMock from './BookList.mock';
 import { SIDEBAR_MENU_ITEMS } from '../../constants';
 
 import './Home.css';
+import { subscribe } from '../../context';
+import AppStore from '../../store';
 
-export default class Home extends Component {
+class Home extends Component {
   render() {
+    console.log('Home rendered');
+    console.log(this.props.home);
     return (
       <div className="home-container">
         {/* <div className="home-banner">
@@ -38,3 +42,8 @@ export default class Home extends Component {
     );
   }
 }
+
+const mapStateToProps = data => ({
+  home: data.home,
+});
+export default subscribe(AppStore, mapStateToProps)(Home);

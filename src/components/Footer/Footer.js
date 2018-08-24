@@ -4,6 +4,8 @@ import './Footer.css';
 
 export default class Footer extends Component {
   render() {
+    console.log('Footer renders');
+
     return (
       <footer className="footer">
         <div className="footer-list">

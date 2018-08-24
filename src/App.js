@@ -6,22 +6,27 @@ import Home from './pages/Home';
 import BookDetails from './pages/BookDetails';
 import Header from './components/Header';
 import Footer from './components/Footer';
-
 import './App.css';
 
-export default class App extends Component {
+class App extends Component {
   render() {
+    console.log('App renders');
+
     return (
-      <Router>
-        <div className="app">
-          <Header />
-          <div className="app-content">
-            <Route exact path="/" component={Home} />
-            <Route path="/record/:recid" component={BookDetails} />
+      <React.Fragment>
+        <Router>
+          <div className="app">
+            <Header />
+            <div className="app-content">
+              <Route exact path="/" component={Home} />
+              <Route path="/record/:recid" component={BookDetails} />
+            </div>
           </div>
-          <Footer />
-        </div>
-      </Router>
+        </Router>
+        <Footer />
+      </React.Fragment>
     );
   }
 }
+
+export default App;
