@@ -23,20 +23,29 @@ class BookDetails extends Component {
       bookInfo: {},
       coverUrl: '',
     };
+
+    this.fetchBook = this.fetchBook.bind(this);
   }
 
-  static getDerivedStateFromProps(props) {
-    const { recid } = props.match.params;
-    const { title, author, abstract } = database[recid];
-
-    return {
-      bookInfo: {
-        title: title,
-        author: author,
-        abstract: abstract,
-      },
+  fetchBook(recid) {
+    this.setState({
+      bookInfo: database[recid],
       coverUrl: `https://picsum.photos/300/420?image=10${recid}`,
-    };
+    });
+  }
+
+  componentDidMount() {
+    this.unlisten = this.props.history.listen((location, action) => {
+      if (location.state) {
+        this.fetchBook(location.state.recid);
+      }
+    });
+
+    this.fetchBook(this.props.match.params.recid);
+  }
+
+  componentWillUnmount() {
+    this.unlisten();
   }
 
   render() {
