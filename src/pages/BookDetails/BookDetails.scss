@@ -7,5 +7,12 @@ $margin-50: 50px;
   .book-details {
     display: flex;
     margin-bottom: $margin-50;
+    flex-wrap: wrap;
+  }
+
+  .book-meta {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: $margin-50;
   }
 }

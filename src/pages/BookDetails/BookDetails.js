@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import BookList from '../../components/BookList';
 import BookCover from '../../components/BookCover';
 import BookInfo from './components/BookInfo';
+import BookLoan from './components/BookLoan';
 
 import bookDetailsMock from './BookDetails.mock';
 import database from '../../databse';
@@ -52,8 +53,11 @@ class BookDetails extends Component {
     return (
       <div className="book-details-container">
         <div className="book-details">
-          <BookCover {...this.cover} coverUrl={this.state.coverUrl} />
-          <BookInfo {...this.state.bookInfo} />
+          <div className="book-meta">
+            <BookCover {...this.cover} coverUrl={this.state.coverUrl} />
+            <BookInfo {...this.state.bookInfo} />
+          </div>
+          <BookLoan />
         </div>
 
         <BookList data={bookDetailsMock} />

@@ -16,7 +16,7 @@ class BookCover extends Component {
           backgroundImage: `url(${coverUrl})`,
         }}
       >
-        <Loader active inline="centered" />
+        {/* <Loader active inline="centered" /> */}
       </div>
     );
   }
