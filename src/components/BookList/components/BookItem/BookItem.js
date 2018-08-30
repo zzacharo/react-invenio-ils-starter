@@ -21,6 +21,9 @@ class BookItem extends Component {
   goToDetails() {
     this.props.history.push({
       pathname: `/record/${this.props.id}`,
+      state: {
+        recid: this.props.id,
+      },
     });
   }
 

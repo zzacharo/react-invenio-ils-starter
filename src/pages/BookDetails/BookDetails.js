@@ -28,16 +28,10 @@ class BookDetails extends Component {
     this.fetchBook = this.fetchBook.bind(this);
   }
 
-  fetchBook(recid) {
-    this.setState({
-      bookInfo: database[recid],
-      coverUrl: `https://picsum.photos/300/420?image=10${recid}`,
-    });
-  }
-
   componentDidMount() {
     this.unlisten = this.props.history.listen((location, action) => {
-      if (location.state) {
+      if (location.state && location.state.recid) {
+        location.state.recid;
         this.fetchBook(location.state.recid);
       }
     });
@@ -49,6 +43,13 @@ class BookDetails extends Component {
     this.unlisten();
   }
 
+  fetchBook(recid) {
+    this.setState({
+      bookInfo: database[recid],
+      coverUrl: `https://picsum.photos/300/420?image=10${recid}`,
+    });
+  }
+
   render() {
     return (
       <div className="book-details-container">
@@ -57,7 +58,7 @@ class BookDetails extends Component {
             <BookCover {...this.cover} coverUrl={this.state.coverUrl} />
             <BookInfo {...this.state.bookInfo} />
           </div>
-          <BookLoan />
+          {/* <BookLoan /> */}
         </div>
 
         <BookList data={bookDetailsMock} />

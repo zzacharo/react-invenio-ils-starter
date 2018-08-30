@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import BookTabs from '../BookTabs';
 
 import './BookInfo.css';
 
@@ -14,6 +15,7 @@ class BookInfo extends Component {
         <div className="book-details-author">by {author}</div>
         <div className="book-details-abstract">{abstract}</div>
         <div className="book-details-other">Aditional Information</div>
+        <BookTabs />
       </div>
     );
   }
