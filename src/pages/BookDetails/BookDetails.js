@@ -31,7 +31,6 @@ class BookDetails extends Component {
   componentDidMount() {
     this.unlisten = this.props.history.listen((location, action) => {
       if (location.state && location.state.recid) {
-        location.state.recid;
         this.fetchBook(location.state.recid);
       }
     });
