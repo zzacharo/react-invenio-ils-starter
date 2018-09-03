@@ -13,6 +13,7 @@ export default class BookList extends Component {
         recid={book.recid}
         coverUrl={book.coverUrl}
         title={book.title}
+        authors={book.authors || book.corporate_authors}
         description={book.description}
       />
     );

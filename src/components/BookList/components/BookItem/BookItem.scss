@@ -45,6 +45,9 @@ $padding-10: 10px;
 
     .book-title {
       font-size: 1.1rem;
+    }
+
+    .truncate {
       width: 180px;
       white-space: nowrap;
       overflow: hidden;

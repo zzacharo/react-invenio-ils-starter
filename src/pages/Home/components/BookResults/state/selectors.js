@@ -9,6 +9,9 @@ export function processFeaturedBooks(data) {
         recid: item.recid,
         title: item.titles[0].title,
         description: item.abstracts[0],
+        authors: item.authors
+          ? item.authors.map(author => author.full_name)
+          : item.corporate_authors,
       })),
     },
   ];
@@ -25,6 +28,9 @@ export function processRecentBooks(data) {
         recid: item.recid,
         title: item.titles[0].title,
         description: item.abstracts[0],
+        authors: item.authors
+          ? item.authors.map(author => author.full_name)
+          : item.corporate_authors,
       })),
     },
   ];

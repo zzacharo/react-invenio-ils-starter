@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import { Button, Icon } from 'semantic-ui-react';
+import { Button, Icon, Popup } from 'semantic-ui-react';
 
 import BookCover from '../../../BookCover';
 
@@ -27,8 +27,19 @@ class BookItem extends Component {
     });
   }
 
+  renderBookAuthors(data) {
+    if (data.authors) {
+      return data.authors.map(author => author.full_name).join();
+    } else if (data.corporate_authors) {
+      return data.corporate_authors.join();
+    } else {
+      return 'No authors available';
+    }
+  }
+
   render() {
-    const { title, coverUrl } = this.props;
+    const { title, coverUrl, authors } = this.props;
+    console.log(this.props.authors);
     return (
       <div className="book-item">
         <BookCover {...this.cover} coverUrl={coverUrl} />
@@ -44,8 +55,21 @@ class BookItem extends Component {
           <Icon name="plus circle" size="large" />
         </div>
         <div className="book-meta">
-          <span className="book-title">{title}</span>
-          <span className="book-author">Dummy Author</span>
+          <Popup
+            trigger={<span className="book-title truncate">{title}</span>}
+            content={title}
+            size="medium"
+          />
+          <Popup
+            trigger={
+              <span className="book-author truncate">
+                {authors.join(' | ')}
+              </span>
+            }
+            content={authors.join(' | ')}
+            size="medium"
+            position="bottom left"
+          />
         </div>
       </div>
     );
