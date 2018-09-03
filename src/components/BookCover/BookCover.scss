@@ -4,6 +4,7 @@ $white: #fff;
 .book-cover {
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
 
   border: 1px solid $book-border-color;
   border-radius: 2%;

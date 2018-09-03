@@ -31,3 +31,9 @@ export const SIDEBAR_MENU_ITEMS = [
     ],
   },
 ];
+
+export const BOOK_DETAILS_TABS = [
+  { menuItem: 'Summary' },
+  { menuItem: 'Information' },
+  { menuItem: 'Chapters' },
+];

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import BookTabs from '../BookTabs';
 
 import './BookInfo.css';
-import { Loader } from 'semantic-ui-react';
+import { Loader, Label, Icon } from 'semantic-ui-react';
 
 class BookInfo extends Component {
   renderBookAuthors(data) {
@@ -26,8 +26,16 @@ class BookInfo extends Component {
         <div className="book-details-author">
           by {this.renderBookAuthors(data)}
         </div>
-        <div className="book-details-abstract">{data.abstracts[0]}</div>
-        <div className="book-details-other">Aditional Information</div>
+        <div className="book-details-other">
+          <Label as="a" color="green">
+            <Icon name="book" /> E-book
+            <Label.Detail>Available</Label.Detail>
+          </Label>
+          <Label as="a" color="red">
+            <Icon name="book" /> Copy
+            <Label.Detail>Not Available</Label.Detail>
+          </Label>
+        </div>
         <BookTabs />
       </div>
     );

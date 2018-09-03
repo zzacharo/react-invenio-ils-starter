@@ -1,5 +1,5 @@
 $padding-40: 40px;
-$margin-30: 30px;
+$margin-20: 20px;
 $color-author: #b1b2ac;
 
 .book-details-info {
@@ -13,6 +13,6 @@ $color-author: #b1b2ac;
   color: $color-author;
 }
 
-.book-details-abstract {
-  margin-top: $margin-30;
+.book-details-other {
+  margin: $margin-20 0;
 }

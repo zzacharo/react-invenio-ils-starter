@@ -50,9 +50,17 @@ class BookItem extends Component {
             height: `${this.cover.height}px`,
           }}
         >
-          <Icon name="bookmark" size="large" />
-          <Button circular icon="eye" size="big" onClick={this.goToDetails} />
-          <Icon name="plus circle" size="large" />
+          <div>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+            quidem nostrum libero voluptatem pariatur magni quas nihil
+            accusantium ratione sit adipisci eius, recusandae quos dignissimos
+            enim nisi vero provident sequi.
+          </div>
+          <div>
+            <Icon name="bookmark" size="large" />
+            <Button circular icon="eye" size="big" onClick={this.goToDetails} />
+            <Icon name="plus circle" size="large" />
+          </div>
         </div>
         <div className="book-meta">
           <Popup
