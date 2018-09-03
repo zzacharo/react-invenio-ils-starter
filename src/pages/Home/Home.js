@@ -3,8 +3,6 @@ import { Grid } from 'semantic-ui-react';
 import BookResults from './components/BookResults';
 import MenuSidebar from './components/MenuSidebar';
 import Statistics from './components/Statistics';
-
-import bookListMock from './BookList.mock';
 import { SIDEBAR_MENU_ITEMS } from '../../constants';
 
 import './Home.css';
@@ -30,7 +28,7 @@ export default class Home extends Component {
                 Find books, e-books, articles, proceedings to loan at CERN.
               </div>
             </div>
-            <BookResults data={bookListMock} />
+            <BookResults />
           </Grid.Column>
         </Grid>
         <Statistics />

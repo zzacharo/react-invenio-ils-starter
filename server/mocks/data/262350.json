@@ -8,6 +8,7 @@
   "_access": {
     "read": []
   },
+  "abstracts": ["This is an abstract"],
   "titles": [
     {
       "subtitle": "order from chaos",
@@ -60,5 +61,6 @@
       "publisher": "Chapman and Hall",
       "place": "London"
     }
-  ]
+  ],
+  "coverUrl": "https://picsum.photos/300/420?image=119"
 }

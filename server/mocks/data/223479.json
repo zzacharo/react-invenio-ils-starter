@@ -14,6 +14,7 @@
   "_access": {
     "read": []
   },
+  "abstracts": ["This is an abstract"],
   "authors": [
     {
       "full_name": "Bazerque, Georges"
@@ -32,5 +33,6 @@
       "publisher": "Dunod",
       "place": "Paris"
     }
-  ]
+  ],
+  "coverUrl": "https://picsum.photos/300/420?image=115"
 }

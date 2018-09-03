@@ -13,6 +13,7 @@
   "_access": {
     "read": []
   },
+  "abstracts": ["This is an abstract"],
   "authors": [
     {
       "full_name": "Ruei, K H"
@@ -28,5 +29,6 @@
       "publisher": "Taipei Univ. Press",
       "place": "Taipei"
     }
-  ]
+  ],
+  "coverUrl": "https://picsum.photos/300/420?image=114"
 }

@@ -7,6 +7,7 @@
   "_access": {
     "read": []
   },
+  "abstracts": ["This is an abstract"],
   "titles": [
     {
       "subtitle": "Leere und F\u00fclle im Universum",
@@ -51,5 +52,6 @@
       "publisher": "Hanser",
       "place": "Munich"
     }
-  ]
+  ],
+  "coverUrl": "https://picsum.photos/300/420?image=118"
 }

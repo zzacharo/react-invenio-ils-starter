@@ -45,6 +45,10 @@ $padding-10: 10px;
 
     .book-title {
       font-size: 1.1rem;
+      width: 180px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .book-author {

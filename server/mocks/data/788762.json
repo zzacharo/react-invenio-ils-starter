@@ -14,6 +14,7 @@
   "_access": {
     "read": []
   },
+  "abstracts": ["This is an abstract"],
   "standard_numbers": [
     {
       "hidden": false,
@@ -34,5 +35,6 @@
       "publisher": "DIN",
       "place": "Berlin"
     }
-  ]
+  ],
+  "coverUrl": "https://picsum.photos/300/420?image=127"
 }

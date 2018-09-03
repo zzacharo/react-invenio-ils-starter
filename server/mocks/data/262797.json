@@ -21,6 +21,7 @@
   "_access": {
     "read": []
   },
+  "abstracts": ["This is an abstract"],
   "$schema": {
     "$ref": "records/books/book/book-v.0.0.1.json"
   },
@@ -31,5 +32,6 @@
       "publisher": "Eur. Space Agency",
       "place": "Noordwijk"
     }
-  ]
+  ],
+  "coverUrl": "https://picsum.photos/300/420?image=122"
 }

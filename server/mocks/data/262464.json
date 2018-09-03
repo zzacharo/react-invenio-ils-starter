@@ -22,6 +22,7 @@
       "value": "9782200214531"
     }
   ],
+  "abstracts": ["This is an abstract"],
   "authors": [
     {
       "full_name": "Meyer, Yves"
@@ -43,5 +44,6 @@
       "publisher": "Colin",
       "place": "Paris"
     }
-  ]
+  ],
+  "coverUrl": "https://picsum.photos/300/420?image=121"
 }

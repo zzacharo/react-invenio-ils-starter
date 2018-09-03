@@ -21,6 +21,7 @@
   "_access": {
     "read": []
   },
+  "abstracts": ["This is an abstract"],
   "authors": [
     {
       "role": "editor",
@@ -37,5 +38,6 @@
       "publisher": "US. Dept. Energy. Office Adm. Serv.",
       "place": "Washington, DC"
     }
-  ]
+  ],
+  "coverUrl": "https://picsum.photos/300/420?image=120"
 }

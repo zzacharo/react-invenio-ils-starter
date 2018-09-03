@@ -20,17 +20,15 @@ class BookItem extends Component {
 
   goToDetails() {
     this.props.history.push({
-      pathname: `/record/${this.props.id}`,
+      pathname: `/record/${this.props.recid}`,
       state: {
-        recid: this.props.id,
+        recid: this.props.recid,
       },
     });
   }
 
   render() {
-    const { title, id } = this.props;
-    const coverUrl = `https://picsum.photos/180/260?image=10${id}`;
-
+    const { title, coverUrl } = this.props;
     return (
       <div className="book-item">
         <BookCover {...this.cover} coverUrl={coverUrl} />

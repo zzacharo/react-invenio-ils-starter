@@ -23,6 +23,7 @@
   "_access": {
     "read": []
   },
+  "abstracts": ["This is an abstract"],
   "keywords": [
     {
       "source": "CERN",
@@ -63,5 +64,6 @@
       "publisher": "Lawrence Berkeley Nat. Lab.",
       "place": "Livermore, CA"
     }
-  ]
+  ],
+  "coverUrl": "https://picsum.photos/300/420?image=111"
 }

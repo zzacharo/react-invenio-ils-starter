@@ -23,6 +23,7 @@
       "full_name": "Maal\u00f8e, Ole"
     }
   ],
+  "abstracts": ["This is an abstract"],
   "$schema": {
     "$ref": "records/books/book/book-v.0.0.1.json"
   },
@@ -33,5 +34,6 @@
       "publisher": "Benjamin",
       "place": "New York, NY"
     }
-  ]
+  ],
+  "coverUrl": "https://picsum.photos/300/420?image=123"
 }

@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { List } from 'semantic-ui-react';
+import { List, Loader } from 'semantic-ui-react';
 import BookList from '../../../../components/BookList';
 
 export default class BookResults extends Component {
+  componentDidMount() {
+    this.props.fetchBookResults();
+  }
+
   renderBookList(listItem, index) {
     return <BookList data={listItem} key={index} />;
   }
 
   render() {
-    let { data } = this.props;
+    let { data, isLoading } = this.props;
+    if (isLoading) return <Loader active inline="centered" />;
     return (
       <List className="book-results">{data.map(this.renderBookList)}</List>
     );

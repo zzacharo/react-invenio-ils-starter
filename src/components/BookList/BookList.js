@@ -10,7 +10,8 @@ export default class BookList extends Component {
     return (
       <BookItem
         key={book.id}
-        id={book.id}
+        recid={book.recid}
+        coverUrl={book.coverUrl}
         title={book.title}
         description={book.description}
       />

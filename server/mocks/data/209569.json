@@ -11,6 +11,7 @@
   "_access": {
     "read": []
   },
+  "abstracts": ["This is an abstract"],
   "titles": [
     {
       "title": "Terminology and symbols; plastics in general; reinforced plastics"
@@ -66,5 +67,6 @@
       "publisher": "ISO",
       "place": "Geneva"
     }
-  ]
+  ],
+  "coverUrl": "https://picsum.photos/300/420?image=113"
 }

@@ -9,6 +9,7 @@
   "_access": {
     "read": []
   },
+  "abstracts": ["This is an abstract"],
   "titles": [
     {
       "title": "Fundamentals of nuclear physics"
@@ -58,5 +59,6 @@
       "publisher": "Cambridge Univ. Press",
       "place": "Cambridge"
     }
-  ]
+  ],
+  "coverUrl": "https://picsum.photos/300/420?image=116"
 }

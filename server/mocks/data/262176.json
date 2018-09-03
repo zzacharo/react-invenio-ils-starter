@@ -9,6 +9,7 @@
   "_access": {
     "read": []
   },
+  "abstracts": ["This is an abstract"],
   "titles": [
     {
       "title": "Introduction to cosmology"
@@ -55,5 +56,6 @@
       "publisher": "Cambridge Univ. Press",
       "place": "Cambridge"
     }
-  ]
+  ],
+  "coverUrl": "https://picsum.photos/300/420?image=117"
 }

@@ -6,10 +6,8 @@ import BookCover from '../../components/BookCover';
 import BookInfo from './components/BookInfo';
 import BookLoan from './components/BookLoan';
 
-import bookDetailsMock from './BookDetails.mock';
-import database from '../../databse';
-
 import './BookDetails.css';
+import { Loader } from 'semantic-ui-react';
 
 class BookDetails extends Component {
   constructor(props) {
@@ -25,42 +23,37 @@ class BookDetails extends Component {
       coverUrl: '',
     };
 
-    this.fetchBook = this.fetchBook.bind(this);
+    this.fetchBookDetails = this.props.fetchBookDetails.bind(this);
   }
 
   componentDidMount() {
     this.unlisten = this.props.history.listen((location, action) => {
       if (location.state && location.state.recid) {
-        this.fetchBook(location.state.recid);
+        this.fetchBookDetails(location.state.recid);
       }
     });
 
-    this.fetchBook(this.props.match.params.recid);
+    this.fetchBookDetails(this.props.match.params.recid);
   }
 
   componentWillUnmount() {
     this.unlisten();
   }
 
-  fetchBook(recid) {
-    this.setState({
-      bookInfo: database[recid],
-      coverUrl: `https://picsum.photos/300/420?image=10${recid}`,
-    });
-  }
-
   render() {
+    let { data, isLoading } = this.props;
+    if (isLoading) return <Loader active inline="centered" />;
     return (
       <div className="book-details-container">
         <div className="book-details">
           <div className="book-meta">
-            <BookCover {...this.cover} coverUrl={this.state.coverUrl} />
-            <BookInfo {...this.state.bookInfo} />
+            <BookCover {...this.cover} coverUrl={data.coverUrl} />
+            <BookInfo data={data} />
           </div>
           {/* <BookLoan /> */}
         </div>
 
-        <BookList data={bookDetailsMock} />
+        <BookList data={data.related} />
       </div>
     );
   }

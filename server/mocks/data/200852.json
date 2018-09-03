@@ -23,6 +23,7 @@
   "_access": {
     "read": []
   },
+  "abstracts": ["This is an abstract"],
   "authors": [
     {
       "full_name": "Chicarro, A F"
@@ -44,5 +45,6 @@
       "publisher": "Eur. Space Agency",
       "place": "Noordwijk"
     }
-  ]
+  ],
+  "coverUrl": "https://picsum.photos/300/420?image=112"
 }

@@ -16,6 +16,7 @@
   "_access": {
     "read": []
   },
+  "abstracts": ["This is an abstract"],
   "standard_numbers": [
     {
       "hidden": false,
@@ -32,5 +33,6 @@
       "publisher": "BSI",
       "place": "London"
     }
-  ]
+  ],
+  "coverUrl": "https://picsum.photos/300/420?image=128"
 }
