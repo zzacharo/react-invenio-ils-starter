@@ -51,10 +51,8 @@ class BookItem extends Component {
           }}
         >
           <div>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-            quidem nostrum libero voluptatem pariatur magni quas nihil
-            accusantium ratione sit adipisci eius, recusandae quos dignissimos
-            enim nisi vero provident sequi.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+            ea consequatur
           </div>
           <div>
             <Icon name="bookmark" size="large" />
@@ -66,7 +64,6 @@ class BookItem extends Component {
           <Popup
             trigger={<span className="book-title truncate">{title}</span>}
             content={title}
-            size="medium"
           />
           <Popup
             trigger={
@@ -75,7 +72,6 @@ class BookItem extends Component {
               </span>
             }
             content={authors.join(' | ')}
-            size="medium"
             position="bottom left"
           />
         </div>

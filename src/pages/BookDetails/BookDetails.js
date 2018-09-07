@@ -5,9 +5,10 @@ import BookList from '../../components/BookList';
 import BookCover from '../../components/BookCover';
 import BookInfo from './components/BookInfo';
 import BookLoan from './components/BookLoan';
+import Holdings from './components/Holdings';
 
 import './BookDetails.css';
-import { Loader } from 'semantic-ui-react';
+import { Segment, Loader } from 'semantic-ui-react';
 
 class BookDetails extends Component {
   constructor(props) {
@@ -52,7 +53,7 @@ class BookDetails extends Component {
           </div>
           {/* <BookLoan /> */}
         </div>
-
+        <Holdings />
         <BookList data={data.related} />
       </div>
     );
